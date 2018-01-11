@@ -3,6 +3,9 @@ pipeline {
     	docker { image 'ubuntu' }
     }*/
     agent any
+    triggers {
+        cron('* * * * *')
+    }
     stages {
         stage('Build') {
             steps {
