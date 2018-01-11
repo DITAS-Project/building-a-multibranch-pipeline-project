@@ -1,8 +1,8 @@
 pipeline {
-    /*agent {
+    agent {
     	docker { image 'ubuntu' }
-    }*/
-    agent any
+    }
+    //agent any
     stages {
         stage('Build') {
             steps {
