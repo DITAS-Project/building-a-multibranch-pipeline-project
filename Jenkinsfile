@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "In Production branch"'
+                sh 'echo "In Production branch with trigger"'
             }
         }
     }
