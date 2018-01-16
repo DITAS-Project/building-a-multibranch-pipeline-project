@@ -1,18 +1,27 @@
 pipeline {
-    agent {
-    	docker { image 'ubuntu' }
+  agent {
+    docker {
+      image 'ubuntu'
     }
-    //agent any
-    stages {
-        stage('Build') {
-            steps {
-                sh 'echo "In Master branch"'
-            }
-        }
+    
+  }
+  stages {
+    stage('Build') {
+      steps {
+        sh 'echo "In Master branch"'
+      }
     }
-    post {
-        always {
-            echo 'Post action fired'
-        }
+    stage('Post') {
+      steps {
+        echo 'Post action'
+      }
     }
+  }
+  post {
+    always {
+      echo 'Post action fired'
+      
+    }
+    
+  }
 }
